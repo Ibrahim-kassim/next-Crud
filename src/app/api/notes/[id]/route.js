@@ -14,5 +14,11 @@ export async function GET(request, { params }) {
   const { id } = params;
   await connectMongoDb();
   const Note = await Note.findOne({ _id: id });
-  return NextResponse.json({Note},{status:200})
+  return await NextResponse.json({Note},{status:200})
+}
+export async function DELETE(request, { params }) {
+  const { id } = params;
+  await connectMongoDb();
+   await Note.findByIdAndDelete(id);
+  return await NextResponse.json("note deleted")
 }

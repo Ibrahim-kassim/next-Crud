@@ -2,8 +2,8 @@ POST http://localhost:3000/api/notes
 Content-Type: application/json
 
 {
-    "title": "note1",
-    "description": "desc1"
+    "title": "note2",
+    "description": "desc2"
 }
 ###
 GET  http://localhost:3000/api/notes
@@ -13,6 +13,10 @@ PUT http://localhost:3000/api/notes/662d285018e97cd3ef5b9980
 Content-Type: application/json
 
 {
-    "title": "note1 updated",
-    "description": "desc1 updated"
+    "title": "note1 updated2",
+    "description": "desc1 updated2"
 }
+###
+DELETE  http://localhost:3000/api/notes/662d285018e97cd3ef5b9980
+Content-Type: application/json
+###
