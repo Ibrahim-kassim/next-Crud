@@ -16,9 +16,10 @@ export async function GET (){
     return NextResponse.json({notes})
 
 }
-export async function DELETE ( request){
-    const id = request.nextUrl.searchParams.get("id");
-    await connectMongoDb();
-    await Note.findByIdAndDelete(id);
-    return NextResponse.json({message:"Note deleted"},{status:200})
-}
+// export async function DELETE ( request){
+//     const id = request.nextUrl.searchParams.get("id");
+//     console.log(id)
+//     await connectMongoDb();
+//     await Note.findByIdAndDelete(id);
+//     return NextResponse.json({message:"Note deleted"},{status:200})
+// }

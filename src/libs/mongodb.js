@@ -8,7 +8,7 @@ const connectMongoDb =async ()=>{
         
     } catch (error) {
         
-        throw new Error("the is error in connection :" ,{error})
+        throw new Error("there is error in connection :" ,{error})
     }
 }
 export default connectMongoDb;
